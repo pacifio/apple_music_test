@@ -73,6 +73,7 @@ class _MyAppState extends State<MyApp> {
     final status = await _musicKitPlugin.authorizationStatus;
 
     final developerToken = await _musicKitPlugin.requestDeveloperToken();
+    print(developerToken);
     final userToken = await _musicKitPlugin.requestUserToken(developerToken);
 
     final countryCode = await _musicKitPlugin.currentCountryCode;
